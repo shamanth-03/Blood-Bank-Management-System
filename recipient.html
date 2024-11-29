@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #B91C1C;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .header {
+            background-color: #DC2626;
+            width: 100%;
+            padding: 16px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .info h2 {
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .form-container {
+            margin-top: 32px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: none; /* Added border none */
+            box-sizing: border-box; /* Added box-sizing */
+        }
+
+        .buttons {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .continue {
+            background-color: #F59E0B;
+            color: #B91C1C;
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
+            cursor: pointer; /* Added cursor pointer */
+        }
+
+        .back {
+            color: white;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Blood Bank</h1>
+        </div>
+        <div class="info">
+            <h2>Recipient Registration</h2>
+        </div>
+        <div class="form-container">
+            <form action="recipe.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="continue">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

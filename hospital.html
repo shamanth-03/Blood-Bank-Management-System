@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-image: url("2.jpg");
+            background-size: cover;
+            background-repeat: repeat-x;
+            padding: 10px;
+            text-align: center;
+        }
+        header {
+            background-color: rgb(157, 236, 236);
+            padding: 5%;
+            padding-bottom: 5%;
+            width: 25%;
+            margin: auto;
+        }
+        section {
+            background-color: rgb(255, 255, 255);
+            padding: 5%;
+            width: 25%;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        form {
+            font-size: 25px;
+            width: 300px;
+            margin: auto;
+            font-style: bold;
+        }
+        form label {
+            display: block;
+            margin-top: 20px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid rgb(18, 16, 16);
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            width: 100px;
+            height: 35px;
+            margin-top: 20px;
+            border: none;
+            background-color: #fd1b1b;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(19, 248, 27);
+            color: rgb(211, 25, 25);
+        }
+    </style>
+</head>
+<body>
+    <header> <h1>Hospital Information</h1></header>
+    <section>
+        <form action="hosinfo.php" method="post" enctype="multipart/form-data">
+            <label for="hospital">Name of Hospital:</label>
+            <input type="text" name="hospital" id="hospital" required><br>
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location" required><br>
+            <label for="bloodgroup">Blood Group:</label>
+            <select id="bloodgroup" name="bloodgroup" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>
